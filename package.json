@@ -1,0 +1,28 @@
+{
+  "name": "post-scheduler-kafka",
+  "version": "1.0.0",
+  "description": "Experiment 8 - Post Scheduler with Kafka, Retry, DLQ and Idempotency",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "scheduler": "node src/scheduler/postScheduler.js",
+    "consumer": "node src/consumer/postConsumer.js",
+    "dlq-consumer": "node src/consumer/dlqConsumer.js",
+    "run:local": "node run.js",
+    "seed": "node src/utils/seedData.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.3.0",
+    "kafkajs": "^2.2.4",
+    "mongodb-memory-server": "^11.3.0",
+    "mongoose": "^8.8.1",
+    "node-cron": "^3.0.3",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
